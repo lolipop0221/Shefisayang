@@ -1,0 +1,125 @@
+/* Custom Styles for OS Simulator */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: none;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    font-weight: 600;
+}
+
+/* Memory Visualization */
+.memory-visual {
+    height: 300px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: auto;
+}
+
+.memory-block {
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 12px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.memory-block:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.memory-free {
+    background-color: #28a745; /* Green for free */
+}
+
+.memory-allocated {
+    background-color: #dc3545; /* Red for allocated */
+}
+
+.memory-fragment {
+    background-color: #ffc107; /* Yellow for fragmented */
+}
+
+/* Table styling */
+.table th {
+    background-color: #e9ecef;
+    border-top: none;
+}
+
+/* Badge styling */
+.badge {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+/* Footer styling */
+.footer {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    .memory-block {
+        font-size: 10px;
+    }
+}
+
+/* Animation for process status */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.running {
+    animation: pulse 1s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
